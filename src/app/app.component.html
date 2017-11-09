@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  
+</head>
+<body>
+  <fieldset>
+    <legend>PowerComponent</legend>
+    <form (submit)="onSubmit()">
+      <label class="power_text">Initial Power Level:</label><input 
+      type="number"
+      name="power"
+      class="power_level"
+      min="1"
+      max="100"
+      [(ngModel)]="power"
+      />
+      
+      <input type="submit" value="Calculate Powers" class="btn">
+      </form>
+      <img src="assets/goku.png" alt="alt" height="100" width="100" style="margin-left:900px;">
+      
+  </fieldset>
+  <div class="levels">
+    <app-human class="levels" [myPower]='power'></app-human>
+    <app-saiyan class="levels" [saiyanPower]='saiyan' [levelMsg]='message'></app-saiyan>
+    <app-super-saiyan class="levels" [superPower]='super' [levelMsgs]='message'></app-super-saiyan>
+    <app-super-saiyan-two class="levels" [saiyan2Power]='saiyan2' [levelss]='message'></app-super-saiyan-two>
+    <app-super-saiyan-three class="levels" [saiyan3Power]='saiyan3' [levelMsg3]='message'></app-super-saiyan-three>
+    <app-super-saiyan-four class="levels" [saiyan4Power]='saiyan4' [levelMsg4]='message'></app-super-saiyan-four>
+  </div>
+</body>
+ </html>
+ 
+
+ 
+ 
